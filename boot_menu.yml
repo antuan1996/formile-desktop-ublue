@@ -1,5 +1,5 @@
 ublue_variants:
-  - label: blue-build/template
+  - label: antuan1996/formile-desktop-ublue
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: blue-build/template
+      - label: formile-desktop-ublue
