@@ -8,7 +8,7 @@ Restart=on-failure
 RestartSec=8s
 Type=forking
 ExecStart=/home/anton/mouse_fix/mouseFix
-TimeoutSec=0
+TimeoutSec=infinity
 StandardOutput=tty
 RemainAfterExit=yes
 
