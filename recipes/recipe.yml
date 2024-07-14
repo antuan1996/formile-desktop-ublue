@@ -12,6 +12,7 @@ image-version: 40 # latest is also supported if you want new updates ASAP
 modules:
   - type: files
     files:
+      - services: /etc/systemd/system
       - usr: /usr
           # copies config/files/usr into your image's /usr.
           # put configuration files you want in /etc/ on a booted system 
