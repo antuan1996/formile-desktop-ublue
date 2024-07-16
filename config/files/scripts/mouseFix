@@ -1,0 +1,7 @@
+#!/bin/bash
+mouseEventPath="/dev/input/by-id/usb-COMPANY_USB_Device-if01-event-mouse"
+eventFileFirst=`udevadm info --query=property --property=DEVNAME --value $mouseEventPath`
+eventNumber=`echo "$eventFileFirst" | sed 's/\/dev\/input\/event//'`
+eventNumber=$(($eventNumber+2))
+eventFileSecond="/dev/input/event$eventNumber"
+/home/anton/mouse_fix/evsieve --input $eventFileFirst grab --input $eventFileSecond grab --output
