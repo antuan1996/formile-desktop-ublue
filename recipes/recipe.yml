@@ -5,7 +5,7 @@ description: This is my personal OS image close to vanila ublue build.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/kinoite-main
-image-version: 40 # latest is also supported if you want new updates ASAP
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -18,6 +18,11 @@ modules:
   #     # copies config/files/usr into your image's /usr.
       # put configuration files you want in /etc/ on a booted system 
       # in /usr/etc/ in the image. read more in files module reference.
+
+  - type: akmods
+    base: main
+    install:
+      - openrazer
 
   - type: script
     scripts:
