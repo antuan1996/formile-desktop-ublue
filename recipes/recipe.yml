@@ -22,6 +22,7 @@ modules:
   - type: akmods
     base: main
     install:
+      - xone
       - openrazer
 
   - type: script
