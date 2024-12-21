@@ -13,7 +13,7 @@ https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zero
 cat > /etc/yum.repos.d/zerotier.repo<< EOF
 [zerotier]
 name=ZeroTier, Inc. RPM Release Repository
-baseurl=http://download.zerotier.com/redhat/fc/22
+baseurl=http://download.zerotier.com/redhat/fc/$releasever
 enabled=1
 gpgcheck=1
 EOF
