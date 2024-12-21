@@ -19,21 +19,17 @@ modules:
       # put configuration files you want in /etc/ on a booted system 
       # in /usr/etc/ in the image. read more in files module reference.
 
-  - type: akmods
-    base: main
-    install:
-      - xone
-      - openrazer
-
-  - type: script
-    scripts:
-    - zerotier.sh
+  # - type: akmods
+  #   base: main
+  #   install:
+  #     - xone
+  #     - openrazer
 
   - type: rpm-ostree
-    repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-    - https://download.opensuse.org/repositories/hardware:/razer/Fedora_%OS_VERSION%/hardware:razer.repo
+    # repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+    # - https://download.opensuse.org/repositories/hardware:/razer/Fedora_%OS_VERSION%/hardware:razer.repo
     install:
-      - openrazer-meta
+      # - openrazer-meta
       - podman-compose
       # - zerotier-one
       # - evtest
@@ -42,6 +38,10 @@ modules:
     remove:
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+
+  - type: script
+    scripts:
+    - zerotier.sh
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
