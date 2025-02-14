@@ -33,7 +33,7 @@ modules:
     install:
       # - openrazer-meta
       - podman-compose
-      - joystickwake
+      # - joystickwake
       # - zerotier-one
       # - evtest
       # - micro
